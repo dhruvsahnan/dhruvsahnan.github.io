@@ -1,39 +1,289 @@
 {
-  "title": "Publications",
+  "title": "Selected Publications",
   "items": [
     {
-      "date": "2026-07",
-      "title": "PLACEHOLDER: Title of Your Published Paper",
-      "authors": ["Dhruv Lastname", "Co-Author One", "Co-Author Two"],
-      "venue_short": "CONF '26",
-      "venue": "Full Name of the Conference 2026",
-      "venue_url": "https://example.com",
-      "award": "Best Paper Award",
+      "date": "2026",
+      "title": "Can LLMs Automate Fact-Checking Article Writing?",
+      "authors": [
+        "Dhruv Sahnan",
+        "David Corney",
+        "Irene Larraz",
+        "Giovanni Zagni",
+        "Ruben Miguez",
+        "Zhuohan Xie",
+        "Iryna Gurevych",
+        "Elizabeth Churchill",
+        "Tanmoy Chakraborty",
+        "Preslav Nakov"
+      ],
+      "venue_short": "TACL '26",
+      "venue": "Transactions of the Association for Computational Linguistics",
       "links": [
-        { "label": "paper",   "url": "https://arxiv.org/abs/0000.00000" },
-        { "label": "code",    "url": "https://github.com/your-handle/your-repo" },
-        { "label": "dataset", "url": "https://example.com/dataset" },
-        { "label": "slides",  "url": "assets/slides.pdf" }
+        {
+          "label": "ACL Anthology",
+          "url": "https://aclanthology.org/2026.tacl-1.23/"
+        }
       ]
     },
     {
-      "date": "2025-12",
-      "title": "PLACEHOLDER: Title of Another Published Paper",
-      "authors": ["Co-Author One*", "Dhruv Lastname*", "Co-Author Two"],
-      "note": "* equal contribution",
-      "venue_short": "JOURNAL '25",
-      "venue": "Name of the Journal 2025",
-      "venue_url": "https://example.com",
+      "date": "2026",
+      "title": "Co-FactChecker: A Framework for Human-AI Collaborative Claim Verification Using Large Reasoning Models",
+      "authors": [
+        "Dhruv Sahnan",
+        "Subhabrata Dutta",
+        "Tanmoy Chakraborty",
+        "Preslav Nakov",
+        "Iryna Gurevych"
+      ],
+      "venue_short": "Under Review",
       "links": [
-        { "label": "paper", "url": "https://example.com/paper" }
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2604.13706"
+        }
       ]
     },
     {
-      "title": "PLACEHOLDER: Title of a Paper Under Review",
-      "authors": ["Dhruv Lastname", "Co-Author One"],
-      "status": "under_review",
+      "date": "2026",
+      "title": "Overview of CheckThat! 2026: Advancing Multilingual Fact-Checking*",
+      "authors": [
+        "Julia Maria Struß",
+        "Sebastian Schellhammer",
+        "Stefan Dietze",
+        "Venktesh V",
+        "Vinay Setty",
+        "Tanmoy Chakraborty",
+        "Preslav Nakov",
+        "Avishek Anand",
+        "Primakov Chungkham",
+        "Salim Hafid",
+        "Dhruv Sahnan",
+        "Konstantin Todorov"
+      ],
+      "note": "* Authors ordered by task order at the CheckThat! lab.",
+      "venue_short": "CLEF '26",
+      "venue": "Conference and Labs of the Evaluation Forum 2026",
       "links": [
-        { "label": "preprint", "url": "https://arxiv.org/abs/0000.00001" }
+        {
+          "label": "Springer",
+          "url": "https://link.springer.com/chapter/10.1007/978-3-032-39150-6_23"
+        }
+      ]
+    },
+    {
+      "date": "2026",
+      "title": "Overview of the CLEF-2026 CheckThat! Lab Task 3 on Generating Full Fact-Checking Articles",
+      "authors": [
+        "Dhruv Sahnan",
+        "Tanmoy Chakraborty",
+        "Preslav Nakov"
+      ],
+      "venue_short": "CLEF '26",
+      "venue": "CLEF 2026 Working Notes",
+      "links": [
+        {
+          "label": "CEUR-WS",
+          "url": "https://ceur-ws.org/Vol-4283/paper53.pdf"
+        }
+      ]
+    },
+    {
+      "date": "2026",
+      "title": "Promises and Pitfalls of Community Moderation on Social Media*",
+      "authors": [
+        "Isabelle Augenstein",
+        "Michiel Bakker",
+        "Tanmoy Chakraborty",
+        "David Corney",
+        "Emilio Ferrara",
+        "Iryna Gurevych",
+        "Scott Hale",
+        "Eduard Hovy",
+        "Heng Ji",
+        "Irene Larraz",
+        "Filippo Menczer",
+        "Preslav Nakov",
+        "Paolo Papotti",
+        "Dhruv Sahnan",
+        "Greta Warren",
+        "Giovanni Zagni"
+      ],
+      "note": "* Authors ordered by last name with contributions specified in the manuscript.",
+      "venue_short": "PNAS",
+      "venue": "Proceedings of the National Academy of Sciences of the United States of America",
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2505.20067"
+        }
+      ]
+    },
+     {
+      "date": "2026",
+      "title": "Nanda Family: Open-Weights Generative Large Language Models for Hindi",
+      "authors": [
+        "Aaryamonvikram Singh",
+        "Debopriyo Banerjee",
+        "Dhruv Sahnan",
+        "Monojit Choudhury",
+        "Shivam Chauhan",
+        "Rocktim Jyoti Das",
+        "Xudong Han",
+        "Haonan Li",
+        "Alok Anil Jadhav",
+        "Utkarsh Agarwal",
+        "Mukund Choudhary",
+        "Fajri Koto",
+        "Junaid Hamid Bhat",
+        "Awantika Shukla",
+        "Samujjwal Ghosh",
+        "Samta Kamboj",
+        "Onkar Pandit",
+        "Lalit Pradhan",
+        "Rahul Pal",
+        "Sunil Kumar Sahu",
+        "Parvez Mullah",
+        "Ali El Filali",
+        "Zainul Abedien Ahmed Quraishi",
+        "Neha Sengupta",
+        "Gokulakrishnan Ramakrishnan",
+        "Rituraj Joshi",
+        "Gurpreet Gosal",
+        "Avraham Sheinin",
+        "Natalia Vassilieva",
+        "Preslav Nakov"
+      ],
+      "venue_short": "EACL '26",
+      "venue": "Conference of the European Chapter of the Association for Computational Linguistics 2026",
+      "links": [
+        {
+          "label": "ACL Anthology",
+          "url": "https://aclanthology.org/2026.eacl-long.288"
+        }
+      ]
+    },
+    {
+      "date": "2026",
+      "title": "FinChain: A Symbolic Benchmark for Verifiable Chain-of-Thought Financial Reasoning",
+      "authors": [
+        "Zhuohan Xie",
+        "Daniil Orel",
+        "Rushil Thareja",
+        "Dhruv Sahnan",
+        "Hachem Madmoun",
+        "Fan Zhang",
+        "Debopriyo Banerjee",
+        "Georgi Georgiev",
+        "Xueqing Peng",
+        "Lingfei Qian",
+        "Jimin Huang",
+        "Jinyan Su",
+        "Aaryamonvikram Singh",
+        "Rui Xing",
+        "Rania Elbadry",
+        "Chen Xu",
+        "Haonan Li",
+        "Fajri Koto",
+        "Ivan Koychev",
+        "Tanmoy Chakraborty",
+        "Yuxia Wang",
+        "Salem Lahlou",
+        "Veselin Stoyanov",
+        "Sophia Ananiadou",
+        "Preslav Nakov"
+      ],
+      "venue_short": "ACL '26",
+      "venue": "Annual Meeting of the Association for Computational Linguistics 2026",
+      "links": [
+        {
+          "label": "ACL Anthology",
+          "url": "https://aclanthology.org/2026.acl-long.662/"
+        }
+      ]
+    },
+    {
+      "date": "2023",
+      "title": "Hatemongers Ride on Echo Chambers to Escalate Hate Speech Diffusion",
+      "authors": [
+        "Vasu Goel",
+        "Dhruv Sahnan",
+        "Subhabrata Dutta",
+        "Anil Bandhakavi",
+        "Tanmoy Chakraborty"
+      ],
+      "venue_short": "PNAS Nexus",
+      "venue": "PNAS Nexus",
+      "links": [
+        {
+          "label": "PNAS Nexus",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10011877"
+        }
+      ]
+    },
+    {
+      "date": "2023",
+      "title": "DiVA: A Scalable, Interactive and Customizable Visual Analytics Platform for Information Diffusion on Large Networks",
+      "authors": [
+        "Dhruv Sahnan",
+        "Vasu Goel",
+        "Sarah Masud",
+        "Chhavi Jain",
+        "Vikram Goyal",
+        "Tanmoy Chakraborty"
+      ],
+      "venue_short": "TKDD '23",
+      "venue": "ACM Transactions on Knowledge Discovery from Data 2023",
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://doi.org/10.1145/3558771"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2112.06267"
+        }
+      ]
+    },
+    {
+      "date": "2021",
+      "title": "Would Your Tweet Invoke Hate on the Fly? Forecasting Hate Intensity of Reply Threads on Twitter",
+      "authors": [
+        "Snehil Dahiya",
+        "Shalini Sharma",
+        "Dhruv Sahnan",
+        "Vasu Goel",
+        "Émilie Chouzenoux",
+        "Víctor Elvira",
+        "Angshul Majumdar",
+        "Anil Bandhakavi",
+        "Tanmoy Chakraborty"
+      ],
+      "venue_short": "KDD '21",
+      "venue": "ACM SIGKDD Conference on Knowledge Discovery & Data Mining 2021",
+      "links": [
+        {
+          "label": "ACM Digital Library",
+          "url": "https://doi.org/10.1145/3447548.3467150"
+        }
+      ]
+    },
+    {
+      "date": "2021",
+      "title": "Better Prevent than React: Deep Stratified Learning to Predict Hate Intensity of Twitter Reply Chains",
+      "authors": [
+        "Dhruv Sahnan",
+        "Snehil Dahiya",
+        "Vasu Goel",
+        "Anil Bandhakavi",
+        "Tanmoy Chakraborty"
+      ],
+      "venue_short": "ICDM '21",
+      "venue": "IEEE International Conference on Data Mining 2021",
+      "links": [
+        {
+          "label": "IEEE Xplore",
+          "url": "https://ieeexplore.ieee.org/document/9679052"
+        }
       ]
     }
   ]

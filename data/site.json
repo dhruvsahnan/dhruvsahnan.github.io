@@ -1,15 +1,13 @@
 {
-  "title": "Dhruv Lastname",
-  "description": "Personal website of Dhruv Lastname",
-  "author_names": ["Dhruv Lastname", "D. Lastname"],
+  "title": "Dhruv Sahnan",
+  "description": "Building AI for Information Integrity",
+  "author_names": ["Dhruv Sahnan", "D. Sahnan"],
   "sections": [
     "about",
     "news",
     "publications",
-    "tutorials",
-    "talks",
     "responsibilities",
     "teaching"
   ],
-  "footer": "Template: [Ashish Sharma](https://ash-shar.github.io/) and [Aseem Srivastava](https://aseemsrivastava.com)"
+  "footer": "Template: [Aseem Srivastava](https://aseemsrivastava.com)"
 }

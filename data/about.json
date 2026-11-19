@@ -1,7 +1,8 @@
 {
   "title": "Hello!",
   "paragraphs": [
-    "PLACEHOLDER: I am currently a [your role] at [Your Institution](https://example.com), working with [Your Advisor](https://example.com). Previously, I [your background].",
-    "PLACEHOLDER: My research lies at the intersection of **topic one**, **topic two**, and *topic three*. Replace this paragraph with a short summary of your interests and recent highlights."
+    "I’m a PhD student in Natural Language Processing at the [Mohamed bin Zayed University of Artificial Intelligence (MBZUAI)](https://mbzuai.ac.ae/), advised by [Preslav Nakov](https://mbzuai.ac.ae/academics/faculty-directory/preslav-nakov) with [Tanmoy Chakraborty (IIT Delhi)](https://tanmoychak.com/) as my external co-advisor.",
+    "My interests lie in safeguarding information integrity in this age of AI, which I approach by pushing the frontiers of automatic fact-checking, news media profiling, and honest, safe, and factual AI systems. My PhD research sits at the intersection of automated fact-checking and human-computer interaction, in which I explore how AI can assist professional fact-checkers in expediting their workflow, especially on the time-consuming task of writing full fact-checking articles.",
+    "I have also worked on building LLMs for specialized domains and languages, specifically, a finance LLM and [Nanda, an open-weights Hindi-English bilingual model family](https://mbzuai.ac.ae/news-events/news/building-ai-model-actually-speaks-hindi)."
   ]
 }

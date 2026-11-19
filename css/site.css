@@ -13,7 +13,7 @@ b { font-weight: 400; }
 
 a,
 a:hover {
-  color: #a00000;
+  color: #0b5cad;
   text-decoration: none;
 }
 
@@ -33,7 +33,7 @@ li {
   width: 180px;
 }
 
-.menulink { color: #a00000; }
+.menulink { color: #0b5cad; }
 .menulink:hover { color: #111; }
 
 /* ---- Main column ---- */
@@ -68,16 +68,16 @@ li {
 }
 
 .tag {
-  border: 1px solid rgb(143, 0, 0);
+  border: 1px solid rgb(11, 92, 173);
   padding: 2px 4px;
   border-radius: 3px;
   margin: 0 1px;
   font-size: 90%;
-  background-color: rgba(143, 0, 0, 0.05);
+  background-color: rgba(11, 92, 173, 0.05);
 }
 
 .news-highlight {
-  color: maroon;
+  color: #0b3d7a;
   font-weight: bold;
 }
 
@@ -85,7 +85,7 @@ li {
   background: none;
   border: 0;
   padding: 0;
-  color: #a00000;
+  color: #0b5cad;
   cursor: pointer;
   font: inherit;
 }
@@ -99,8 +99,8 @@ li {
 .site-footer { font-size: 0.8em; }
 
 .data-error {
-  border: 1px solid #a00000;
-  background: rgba(143, 0, 0, 0.06);
+  border: 1px solid #0b5cad;
+  background: rgba(11, 92, 173, 0.06);
   padding: 8px 12px;
   border-radius: 4px;
   margin: 8px 0;

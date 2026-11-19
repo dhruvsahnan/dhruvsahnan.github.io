@@ -239,8 +239,7 @@
 
   function renderSidebar(profile) {
     var name = profile.name || {};
-    var html = '<p class="name"><span style="font-weight: 600;">' + esc(name.first || '') + ' </span>' +
-      esc(name.last || '') + '</p>';
+    var html = '<p class="name"><span style="font-weight: 600;">' + esc(name.first || '') + ' ' + esc(name.last || '') + ' </span></p>';
     if (profile.photo) {
       html += '<img src="' + esc(safeUrl(profile.photo)) + '" alt="' +
         esc(((name.first || '') + ' ' + (name.last || '')).trim()) +

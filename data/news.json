@@ -4,17 +4,57 @@
   "items": [
     {
       "date": "2026-11",
-      "text": "PLACEHOLDER: Launched my personal website!"
-    },
-    {
-      "date": "2026-10",
-      "emoji": "🔥",
-      "highlight": true,
-      "text": "PLACEHOLDER: A highlighted item shows in bold maroon. Use it for your biggest news. Links work too: see the [award listing](https://example.com)."
+      "text": "Attended my first **Dagstuhl Seminar** on *Technology, Trust, Truth: The Role of Responsible AI in Combating Misinformation*."
     },
     {
       "date": "2026-09",
-      "text": "PLACEHOLDER: Our paper on **some topic** got accepted at [Some Conference 2026](https://example.com)."
+      "text": "Presented Task 3 of the CheckThat! Lab at **CLEF 2026** in Jena, Germany."
+    },
+    {
+      "date": "2026-07",
+      "text": "Presented *Can LLMs Automate Fact-Checking Article Writing?* at **ACL 2026** in San Diego."
+    },
+    {
+      "date": "2025-12",
+      "text": "Released **Nanda 87B**, an open-weights Hindi-English bilingual LLM."
+    },
+    {
+      "date": "2025-09",
+      "text": "Back at MBZUAI after my visit to UKP Lab."
+    },
+    {
+      "date": "2025-08",
+      "emoji": "🔥",
+      "highlight": true,
+      "text": "My first first-authored paper from my PhD, *Can LLMs Automate Fact-Checking Article Writing?*, was accepted at **TACL**."
+    },
+    {
+      "date": "2025-08",
+      "text": "The **CheckThat! Lab** was accepted at CLEF 2026, with a shared task on generating full fact-checking articles."
+    },
+    {
+      "date": "2025-05",
+      "text": "Joined the UKP Lab at TU Darmstadt as a visiting researcher."
+    },
+    {
+      "date": "2025-04",
+      "text": "Released **Nanda 10B**, an open-weights Hindi-English bilingual LLM."
+    },
+    {
+      "date": "2024-08",
+      "text": "Left Logically and started my PhD at MBZUAI."
+    },
+    {
+      "date": "2023-02",
+      "text": "Paper accepted at **PNAS Nexus**."
+    },
+    {
+      "date": "2022-07",
+      "text": "Joined Logically as an NLP Engineer."
+    },
+    {
+      "date": "2022-06",
+      "text": "Graduated with a B.Tech in Computer Science and Applied Mathematics from IIIT-Delhi."
     }
   ]
 }
