@@ -1,0 +1,20 @@
+{
+  "title": "News and Updates",
+  "visible_count": 8,
+  "items": [
+    {
+      "date": "2026-11",
+      "text": "PLACEHOLDER: Launched my personal website!"
+    },
+    {
+      "date": "2026-10",
+      "emoji": "🔥",
+      "highlight": true,
+      "text": "PLACEHOLDER: A highlighted item shows in bold maroon. Use it for your biggest news. Links work too: see the [award listing](https://example.com)."
+    },
+    {
+      "date": "2026-09",
+      "text": "PLACEHOLDER: Our paper on **some topic** got accepted at [Some Conference 2026](https://example.com)."
+    }
+  ]
+}

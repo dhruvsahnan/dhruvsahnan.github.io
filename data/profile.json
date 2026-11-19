@@ -1,0 +1,11 @@
+{
+  "name": { "first": "Dhruv", "last": "Lastname" },
+  "photo": "images/profile-placeholder.svg",
+  "email": "your.name [at] your-institution.edu",
+  "links": [
+    { "label": "resume",   "url": "assets/cv.pdf",                         "icon": "fas fa-file-alt" },
+    { "label": "linkedin", "url": "https://linkedin.com/in/your-handle",   "icon": "fab fa-linkedin" },
+    { "label": "github",   "url": "https://github.com/your-handle",        "icon": "fab fa-github" },
+    { "label": "scholar",  "url": "https://scholar.google.com/citations?user=YOUR_ID", "icon": "fab fa-google" }
+  ]
+}

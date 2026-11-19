@@ -1,0 +1,17 @@
+{
+  "title": "Organized Tutorials",
+  "items": [
+    {
+      "date": "2026-12",
+      "title": "PLACEHOLDER: Title of a Tutorial or Workshop You Organized",
+      "authors_prefix": "Organizers:",
+      "authors": ["Dhruv Lastname", "Co-Organizer One", "Co-Organizer Two"],
+      "venue_short": "CONF '26",
+      "venue": "Full Name of the Conference 2026",
+      "venue_url": "https://example.com",
+      "links": [
+        { "label": "website", "url": "https://example.com/tutorial" }
+      ]
+    }
+  ]
+}

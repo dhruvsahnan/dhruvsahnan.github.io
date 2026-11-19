@@ -1,0 +1,40 @@
+{
+  "title": "Publications",
+  "items": [
+    {
+      "date": "2026-07",
+      "title": "PLACEHOLDER: Title of Your Published Paper",
+      "authors": ["Dhruv Lastname", "Co-Author One", "Co-Author Two"],
+      "venue_short": "CONF '26",
+      "venue": "Full Name of the Conference 2026",
+      "venue_url": "https://example.com",
+      "award": "Best Paper Award",
+      "links": [
+        { "label": "paper",   "url": "https://arxiv.org/abs/0000.00000" },
+        { "label": "code",    "url": "https://github.com/your-handle/your-repo" },
+        { "label": "dataset", "url": "https://example.com/dataset" },
+        { "label": "slides",  "url": "assets/slides.pdf" }
+      ]
+    },
+    {
+      "date": "2025-12",
+      "title": "PLACEHOLDER: Title of Another Published Paper",
+      "authors": ["Co-Author One*", "Dhruv Lastname*", "Co-Author Two"],
+      "note": "* equal contribution",
+      "venue_short": "JOURNAL '25",
+      "venue": "Name of the Journal 2025",
+      "venue_url": "https://example.com",
+      "links": [
+        { "label": "paper", "url": "https://example.com/paper" }
+      ]
+    },
+    {
+      "title": "PLACEHOLDER: Title of a Paper Under Review",
+      "authors": ["Dhruv Lastname", "Co-Author One"],
+      "status": "under_review",
+      "links": [
+        { "label": "preprint", "url": "https://arxiv.org/abs/0000.00001" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+/* Site styles. Layout: Bootstrap 4 grid (loaded from CDN in index.html).
+   Look and feel carried over from the original template. */
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 350;
+  color: #333;
+  font-size: 17px;
+  background-color: #fff;
+}
+
+b { font-weight: 400; }
+
+a,
+a:hover {
+  color: #a00000;
+  text-decoration: none;
+}
+
+li {
+  margin: 6px 0;
+  line-height: 1.6;
+}
+
+/* ---- Sidebar ---- */
+.name {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 23pt;
+  color: #111;
+}
+
+.profilepic {
+  width: 180px;
+}
+
+.menulink { color: #a00000; }
+.menulink:hover { color: #111; }
+
+/* ---- Main column ---- */
+.about {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.header {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 1.4em;
+  font-weight: 400;
+  color: #111;
+}
+
+.papertitle {
+  color: #111;
+  font-weight: 400;
+}
+
+.thisauthor {
+  color: #000;
+  text-decoration: underline;
+  font-weight: 400;
+}
+
+.confshort { font-weight: 300; }
+
+.conf {
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+.tag {
+  border: 1px solid rgb(143, 0, 0);
+  padding: 2px 4px;
+  border-radius: 3px;
+  margin: 0 1px;
+  font-size: 90%;
+  background-color: rgba(143, 0, 0, 0.05);
+}
+
+.news-highlight {
+  color: maroon;
+  font-weight: bold;
+}
+
+.news-more-btn {
+  background: none;
+  border: 0;
+  padding: 0;
+  color: #a00000;
+  cursor: pointer;
+  font: inherit;
+}
+.news-more-btn:hover { text-decoration: underline; }
+
+.dotted-rule {
+  border-top: dotted 2px;
+  border-color: #d3d3d3;
+}
+
+.site-footer { font-size: 0.8em; }
+
+.data-error {
+  border: 1px solid #a00000;
+  background: rgba(143, 0, 0, 0.06);
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin: 8px 0;
+  font-size: 0.9em;
+  text-align: left;
+}
+
+/* ---- Responsive ---- */
+@media (min-width: 768px) {
+  .fixed-posi { position: fixed; }
+}
+
+@media only screen and (max-width: 900px) {
+  .allstuff,
+  .allstuffp { padding-top: 0 !important; }
+
+  .profilepic {
+    width: 150px;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .menur { padding-top: 18px !important; }
+
+  .paper { border-left: 1px solid #ddd; }
+}

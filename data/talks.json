@@ -1,0 +1,23 @@
+{
+  "title": "Invited Talks & Symposiums",
+  "items": [
+    {
+      "date": "2026-10",
+      "title": "PLACEHOLDER: Title or one-line description of the talk.",
+      "event": "Name of the Event",
+      "event_url": "https://example.com",
+      "links": [
+        { "label": "Slides",   "url": "assets/talk-slides.pdf" },
+        { "label": "YouTube",  "url": "https://www.youtube.com/watch?v=VIDEO_ID" },
+        { "label": "LinkedIn", "url": "https://linkedin.com/posts/your-post" }
+      ]
+    },
+    {
+      "date": "2026-03",
+      "date_label": "2025 | 2026",
+      "title": "PLACEHOLDER: Use date_label when you want to show something other than the month and year, e.g. a range.",
+      "event": "A Recurring Event",
+      "event_url": "https://example.com"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Social-preview tags are read by crawlers WITHOUT running JavaScript,
+         so edit them here by hand (title, description, image, url).
+         The browser tab title is updated automatically from data/site.json. -->
+    <title>Your Name</title>
+    <meta name="title" content="Your Name">
+    <meta name="description" content="Personal website of Your Name">
+    <meta name="theme-color" content="#222222">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Your Name">
+    <meta property="og:title" content="Your Name">
+    <meta property="og:description" content="Personal website of Your Name">
+    <meta property="og:image" content="images/profile-placeholder.svg">
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:title" content="Your Name">
+    <meta property="twitter:description" content="Personal website of Your Name">
+
+    <link rel="icon" href="images/profile-placeholder.svg" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/site.css">
+  </head>
+
+  <body>
+    <div class="container pt-5 allstuffp">
+      <div class="row pt-5 allstuff">
+
+        <!-- Sidebar: filled from data/profile.json -->
+        <div class="col-md-3 pt-5">
+          <div class="fixed-posi" id="sidebar"></div>
+        </div>
+
+        <!-- Main column: one block per section, filled from data/*.json
+             (order is controlled by "sections" in data/site.json) -->
+        <div class="col-md-9 pt-5 about" id="main">
+          <noscript>This site needs JavaScript enabled to load its content.</noscript>
+        </div>
+
+      </div>
+    </div>
+
+    <script src="js/site.js"></script>
+  </body>
+</html>
