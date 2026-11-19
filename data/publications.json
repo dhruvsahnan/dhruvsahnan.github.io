@@ -235,12 +235,8 @@
       "venue": "ACM Transactions on Knowledge Discovery from Data 2023",
       "links": [
         {
-          "label": "paper",
+          "label": "ACM Digital Library",
           "url": "https://doi.org/10.1145/3558771"
-        },
-        {
-          "label": "arXiv",
-          "url": "https://arxiv.org/abs/2112.06267"
         }
       ]
     },

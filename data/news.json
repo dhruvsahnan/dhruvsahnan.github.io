@@ -1,22 +1,26 @@
 {
   "title": "News and Updates",
-  "visible_count": 8,
+  "visible_count": 10,
   "items": [
     {
       "date": "2026-11",
-      "text": "Attended my first **Dagstuhl Seminar** on *Technology, Trust, Truth: The Role of Responsible AI in Combating Misinformation*."
+      "text": "Attended my first **Dagstuhl Seminar** on [*Technology, Trust, Truth: The Role of Responsible AI in Combating Misinformation*](https://www.dagstuhl.de/en/seminars/seminar-calendar/seminar-details/26461)."
     },
     {
       "date": "2026-09",
-      "text": "Presented Task 3 of the CheckThat! Lab at **CLEF 2026** in Jena, Germany."
+      "text": "Our paper [*Promises and Pitfalls of Community Moderation on Social Media*](https://arxiv.org/abs/2505.20067) was accepted at **PNAS**."
     },
     {
       "date": "2026-08",
-      "text": "The 10th edition of the CheckThat! Lab was accepted at **CLEF 2027**, with another iteration of the shared task on generating full fact-checking articles and a new shared task on media profiling from first impressions."
-    }
+      "text": "The [10th edition of the CheckThat! Lab](https://checkthat.gitlab.io/clef2027/) was accepted at **CLEF 2027**, with another iteration of the shared task on generating full fact-checking articles and a new shared task on media profiling from first impressions."
+    },
     {
       "date": "2026-07",
-      "text": "Presented *Can LLMs Automate Fact-Checking Article Writing?* at **ACL 2026** in San Diego."
+      "text": "Presented [*Can LLMs Automate Fact-Checking Article Writing?*](https://aclanthology.org/2026.tacl-1.23/) at **ACL 2026** in San Diego."
+    },
+    {
+      "date": "2026-03",
+      "text": "Appointed as one of the student representatives on the **EACL board**."
     },
     {
       "date": "2025-12",
@@ -30,11 +34,11 @@
       "date": "2025-08",
       "emoji": "🔥",
       "highlight": true,
-      "text": "My first first-authored paper from my PhD, *Can LLMs Automate Fact-Checking Article Writing?*, was accepted at **TACL**."
+      "text": "My first first-authored paper from my PhD, [*Can LLMs Automate Fact-Checking Article Writing?*](https://aclanthology.org/2026.tacl-1.23/), was accepted at **TACL**."
     },
     {
       "date": "2025-08",
-      "text": "The **CheckThat! Lab** was accepted at CLEF 2026, with a shared task on generating full fact-checking articles."
+      "text": "The [**CheckThat! Lab**](https://checkthat.gitlab.io/clef2026/) was accepted at CLEF 2026, with a shared task on generating full fact-checking articles."
     },
     {
       "date": "2025-05",
