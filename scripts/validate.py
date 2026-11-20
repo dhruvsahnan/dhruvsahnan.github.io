@@ -14,6 +14,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 KNOWN_SECTIONS = {"about", "news", "publications", "tutorials", "talks", "responsibilities", "teaching"}
+PAGE_FILES = {"things", "mcdonalds"}  # separate pages (things.html, mcdonalds.html), not home-page sections
 DATE_RE = re.compile(r"^\d{4}(-(0[1-9]|1[0-2])(-\d{2})?)?$")
 
 errors, warnings = [], []
@@ -137,6 +138,72 @@ def check_list(name, data):
             err(f, f"items[{i}]: must be a string or an object with 'text'")
 
 
+def check_things(data):
+    f = "data/things.json"
+    items = items_of(f, data)
+    declared = data.get("categories") if isinstance(data, dict) else None
+    if declared is not None and not isinstance(declared, list):
+        err(f, "'categories' must be a list of names")
+        declared = None
+    used = set()
+    for i, it in enumerate(items):
+        w = f"items[{i}]"
+        if not isinstance(it, dict):
+            err(f, f"{w}: must be an object")
+            continue
+        if not it.get("name"):
+            err(f, f"{w}: missing 'name'")
+        if it.get("category"):
+            used.add(it["category"])
+        else:
+            warn(f, f"{w}: no 'category', so it only appears under the All filter")
+        if it.get("image"):
+            check_url(f, f"{w}.image", it["image"])
+        if it.get("url"):
+            check_url(f, f"{w}.url", it["url"])
+        src = it.get("image_source")
+        if src is not None and not (isinstance(src, str) and src.startswith(("https://", "http://"))):
+            err(f, f"{w}: 'image_source' must be an http(s) URL")
+        if src and not it.get("image"):
+            warn(f, f"{w}: has 'image_source' but no 'image' path to save it to")
+    for c in declared or []:
+        if c not in used:
+            warn(f, f"category '{c}' is listed in 'categories' but no item uses it")
+
+
+def check_mcdonalds(data):
+    f = "data/mcdonalds.json"
+    items = items_of(f, data)
+    known = None
+    map_path = ROOT / "images" / "world-map.json"
+    if map_path.exists():
+        try:
+            known = set(json.loads(map_path.read_text(encoding="utf-8")).get("points", {}))
+        except json.JSONDecodeError:
+            err("images/world-map.json", "invalid JSON (rebuild it with scripts/build_world_map.mjs)")
+    else:
+        warn(f, "images/world-map.json not found, so the map will not draw")
+    seen = {}
+    for i, it in enumerate(items):
+        w = f"items[{i}]"
+        if not isinstance(it, dict):
+            err(f, f"{w}: must be an object")
+            continue
+        code = it.get("country")
+        if not isinstance(code, str) or not re.fullmatch(r"[A-Za-z]{2}", code.strip()):
+            err(f, f"{w}: 'country' must be a two-letter ISO code such as \"IN\" or \"AE\"")
+            continue
+        code = code.strip().upper()
+        if known is not None and code not in known:
+            err(f, f"{w}: '{code}' is not a known ISO 3166-1 country code")
+        if code in seen:
+            warn(f, f"{w}: {code} is already listed in items[{seen[code]}] (it counts once on the map)")
+        seen.setdefault(code, i)
+        check_date(f, w, it, required=False)
+        if not it.get("order") and not it.get("note"):
+            warn(f, f"{w}: no 'order' or 'note' for {code}")
+
+
 def check_about(data):
     f = "data/about.json"
     paras = data.get("paragraphs") if isinstance(data, dict) else None
@@ -185,14 +252,24 @@ def main():
             if data is not None:
                 checkers[s](data)
 
+    if (DATA / "things.json").exists():
+        things = load("things")
+        if things is not None:
+            check_things(things)
+
+    if (DATA / "mcdonalds.json").exists():
+        mc = load("mcdonalds")
+        if mc is not None:
+            check_mcdonalds(mc)
+
     # Files in data/ that the site never loads
     for p in sorted(DATA.glob("*.json")):
-        if p.stem not in sections and p.stem not in ("site", "profile"):
+        if p.stem not in sections and p.stem not in ("site", "profile") and p.stem not in PAGE_FILES:
             warn(f"data/{p.name}", "not listed in site.json 'sections', so it is not shown on the site")
 
     placeholders = sum(
         (DATA / f"{n}.json").read_text(encoding="utf-8").count("PLACEHOLDER")
-        for n in KNOWN_SECTIONS if (DATA / f"{n}.json").exists()
+        for n in KNOWN_SECTIONS | PAGE_FILES if (DATA / f"{n}.json").exists()
     )
     if placeholders:
         warn("data/", f"{placeholders} entries still say PLACEHOLDER")

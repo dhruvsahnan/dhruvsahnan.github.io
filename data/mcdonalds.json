@@ -1,0 +1,74 @@
+{
+  "title": "McDonald's Around the World",
+  "intro": "Eating at McDonald's in every country I visit is a ritual for me and Nidhi. See the map for every McDonald's I've been to (or by extension every country I've been to 😃)",
+  "items": [
+    {
+      "country": "IN",
+      "when": "*always and forever*",
+      "order": "Big Spicy Paneer Wrap",
+      "note": "India is my home country, so I have eaten here in several cities."
+    },
+    {
+      "country": "AE",
+      "name": "UAE",
+      "when": "since 2023",
+      "order": "Veggie Deluxe Burger",
+      "note": "Abu Dhabi and Dubai."
+    },
+    {
+      "country": "US",
+      "when": "2026",
+      "note": "San Francisco."
+    },
+    {
+      "country": "DE",
+      "when": "2025",
+      "order": "Fries",
+      "note": "Loved the fries. I ate at several cities across Germany because I spent three months in Darmstadt, which is also why so many European countries appear here."
+    },
+    {
+      "country": "CH",
+      "when": "2025",
+      "order": "Rösti Fries",
+      "note": "Zurich."
+    },
+    {
+      "country": "LU",
+      "when": "2025",
+      "note": "Luxembourg City."
+    },
+    {
+      "country": "BE",
+      "when": "2025",
+      "note": "Brussels. The 2025 birthday trip.",
+      "badge": "🎉"
+    },
+    {
+      "country": "NL",
+      "when": "2025",
+      "note": "Amsterdam. The 2025 birthday trip.",
+      "badge": "🎉"
+    },
+    {
+      "country": "FR",
+      "when": "2025",
+      "order": "Macarons",
+      "note": "Strasbourg. The macarons were cute."
+    },
+    {
+      "country": "AT",
+      "when": "2025",
+      "note": "Linz and Vienna, while I was there for ACL 2025."
+    },
+    {
+      "country": "SK",
+      "when": "2025",
+      "note": "Bratislava. The location was cute."
+    },
+    {
+      "country": "CZ",
+      "when": "2025",
+      "note": "Prague. The location was cute."
+    }
+  ]
+}

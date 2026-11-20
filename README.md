@@ -1,36 +1,29 @@
-# Personal website
+<img src="images/profile.jpg" alt="Dhruv Sahnan" width="150" align="right">
 
-A static, single-page academic website. All content lives in JSON files under `data/` and is rendered in the browser by `js/site.js`, so updating the site means editing a JSON file and pushing.
+# Hi, I'm Dhruv
 
-```
-index.html        page shell (rarely edited)
-css/site.css      styles
-js/site.js        reads data/*.json and renders each section
-data/*.json       YOUR CONTENT: one file per section (see data/README.md)
-assets/           CV, slides, posters
-images/           profile photo and other images
-scripts/validate.py   checks the JSON files before you push
-```
+I'm a PhD student in Natural Language Processing at [MBZUAI](https://mbzuai.ac.ae/), advised by [Preslav Nakov](https://mbzuai.ac.ae/academics/faculty-directory/preslav-nakov) with [Tanmoy Chakraborty (IIT Delhi)](https://tanmoychak.com/) as my external co-advisor.
 
-## Preview locally
+I work on safeguarding information integrity in the age of AI: automatic fact-checking, news media profiling, and honest, safe, and factual AI systems. My PhD research sits at the intersection of automated fact-checking and human-computer interaction, exploring how AI can help professional fact-checkers write full fact-checking articles faster.
 
-Browsers block JSON loading from `file://`, so use a tiny local server:
+I have also built LLMs for specialized domains and languages, including a finance LLM and [Nanda, an open-weights Hindi-English bilingual model family](https://mbzuai.ac.ae/news-events/news/building-ai-model-actually-speaks-hindi).
 
-```bash
-python3 -m http.server 8000
-# then open http://localhost:8000
-```
+[Website](https://dhruvsahnan.github.io) · [Google Scholar](https://scholar.google.com/citations?user=TNJYdd8AAAAJ&hl=en) · [LinkedIn](https://www.linkedin.com/in/dhruvsahnan) · dhruv.sahnan [at] mbzuai.ac.ae
 
-## Update content
+## Selected publications
 
-1. Edit the right file in `data/` (see [`data/README.md`](data/README.md) for every field).
-2. Run `python3 scripts/validate.py`.
-3. Commit and push.
+- [Can LLMs Automate Fact-Checking Article Writing?](https://aclanthology.org/2026.tacl-1.23/), *TACL 2026*
+- [Co-FactChecker: A Framework for Human-AI Collaborative Claim Verification Using Large Reasoning Models](https://arxiv.org/abs/2604.13706), *2026*
+- [Promises and Pitfalls of Community Moderation on Social Media](https://arxiv.org/abs/2505.20067), *PNAS 2026*
+- [Nanda Family: Open-Weights Generative Large Language Models for Hindi](https://aclanthology.org/2026.eacl-long.288), *EACL 2026*
+- [FinChain: A Symbolic Benchmark for Verifiable Chain-of-Thought Financial Reasoning](https://aclanthology.org/2026.acl-long.662/), *ACL 2026*
 
-## Deploy on GitHub Pages
+The full list is on my [website](https://dhruvsahnan.github.io) and [Google Scholar](https://scholar.google.com/citations?user=TNJYdd8AAAAJ&hl=en).
 
-Create a repository named `<your-username>.github.io`, push this folder to its `main` branch, and enable Pages (Settings, Pages, deploy from the `main` branch root). For a custom domain add a `CNAME` file containing the domain name.
+## Recent news
 
-## Credits
-
-The layout and styling are adapted from [Aseem Srivastava's site](https://aseemsrivastava.com), which credits [Ashish Sharma's template](https://ash-shar.github.io/), which is built on Sebastin Santy's [minimal-research-theme](https://github.com/SebastinSanty/minimal-research-theme). That theme's README states a [Creative Commons Attribution-ShareAlike 3.0](http://creativecommons.org/licenses/by-sa/3.0/) license, so keep the credit in the footer (`footer` in `data/site.json`).
+- **Nov 2026:** Attended my first Dagstuhl Seminar on [Technology, Trust, Truth: The Role of Responsible AI in Combating Misinformation](https://www.dagstuhl.de/en/seminars/seminar-calendar/seminar-details/26461).
+- **Sep 2026:** [Promises and Pitfalls of Community Moderation on Social Media](https://arxiv.org/abs/2505.20067) accepted at PNAS.
+- **Aug 2026:** The [10th edition of the CheckThat! Lab](https://checkthat.gitlab.io/clef2027/) accepted at CLEF 2027.
+- **Jul 2026:** Presented [Can LLMs Automate Fact-Checking Article Writing?](https://aclanthology.org/2026.tacl-1.23/) at ACL 2026 in San Diego.
+- **Mar 2026:** Appointed a student representative on the EACL board.

@@ -127,3 +127,170 @@ li {
 
   .paper { border-left: 1px solid #ddd; }
 }
+
+/* ---- Things page ---- */
+.things-intro { text-align: left; }
+
+.things-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 14px 0 20px;
+}
+
+.things-chip {
+  border: 1px solid #0b5cad;
+  background: transparent;
+  color: #0b5cad;
+  border-radius: 999px;
+  padding: 2px 14px;
+  font: inherit;
+  font-size: 0.9em;
+  cursor: pointer;
+}
+.things-chip:hover,
+.things-chip.active {
+  background: #0b5cad;
+  color: #fff;
+}
+
+.things-grid { text-align: left; }
+
+.thing { margin-bottom: 24px; }
+.thing[hidden] { display: none !important; }
+
+.thing-card,
+a.thing-card:hover {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.thing-img {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding-top: 100%; /* square tile */
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+/* default: show the whole product, centred, with padding around it */
+.thing-img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 12%;
+  object-fit: contain;
+}
+/* "image_fit": "cover" in things.json: fill the whole tile (for real photos) */
+.thing-img-cover img {
+  padding: 0;
+  object-fit: cover;
+}
+a.thing-card:hover .thing-img {
+  border-color: #0b5cad;
+  box-shadow: 0 2px 10px rgba(11, 92, 173, 0.18);
+}
+
+.thing-name {
+  display: block;
+  margin-top: 8px;
+  color: #111;
+  line-height: 1.3;
+}
+.thing-note {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.85em;
+  line-height: 1.4;
+  color: #555;
+}
+.thing-meta {
+  display: block;
+  margin-top: 3px;
+  font-size: 0.72em;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #888;
+}
+
+/* ---- McDonald's page ---- */
+.mc-count {
+  text-align: left;
+  margin: 4px 0 6px;
+  color: #555;
+}
+.mc-count-num {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 2em;
+  font-weight: 600;
+  color: #0b5cad;
+  margin-right: 2px;
+}
+
+.mc-map { width: 100%; margin: 4px 0 24px; }
+.mc-map svg { display: block; width: 100%; height: auto; }
+.mc-country { fill: #e3e6ea; stroke: #fff; stroke-width: 0.5; }
+.mc-visited { fill: #0b5cad; }
+.mc-visited:hover { fill: #0b3d7a; }
+
+.mc-list { text-align: left; }
+.mc-tile { margin-bottom: 24px; }
+.mc-tile-in {
+  position: relative;
+  display: block;
+  height: 100%;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 12px 14px;
+}
+.mc-flag {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 2em;
+  line-height: 1.1;
+  font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
+}
+.mc-name {
+  display: block;
+  color: #111;
+  line-height: 1.3;
+}
+.mc-order {
+  display: block;
+  margin-top: 3px;
+  font-size: 0.85em;
+  line-height: 1.35;
+  color: #0b3d7a;
+}
+.mc-note {
+  display: block;
+  margin-top: 3px;
+  font-size: 0.8em;
+  line-height: 1.4;
+  color: #555;
+}
+.mc-date {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.72em;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #888;
+}
+.mc-badge {
+  position: absolute;
+  top: -13px;
+  left: -10px;
+  font-size: 1.5em;
+  line-height: 1;
+  transform: rotate(-15deg);
+  font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
+}
+.mc-when { color: #555; }

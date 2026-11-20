@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Social-preview tags are read by crawlers WITHOUT running JavaScript,
+         so edit them here by hand. The tab title is set automatically from
+         data/things.json and data/site.json. -->
+    <title>Things | Dhruv Sahnan</title>
+    <meta name="title" content="Things | Dhruv Sahnan">
+    <meta name="description" content="Technology and things I use every day">
+    <meta name="theme-color" content="#222222">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Dhruv Sahnan">
+    <meta property="og:title" content="Things | Dhruv Sahnan">
+    <meta property="og:description" content="Technology and things I use every day">
+    <meta property="og:image" content="images/profile-placeholder.svg">
+    <meta property="twitter:card" content="summary">
+
+    <link rel="icon" href="images/favicon.png" type="image/png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://stackpath.bootstrapcdn.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Titillium+Web:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="data/site.json" as="fetch" crossorigin>
+    <link rel="preload" href="data/profile.json" as="fetch" crossorigin>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/site.css">
+  </head>
+
+  <!-- data-page tells js/site.js to render data/things.json instead of the home page sections -->
+  <body data-page="things">
+    <div class="container pt-5 allstuffp">
+      <div class="row pt-5 allstuff">
+
+        <!-- Sidebar: filled from data/profile.json (a Home link is added automatically) -->
+        <div class="col-md-3 pt-5">
+          <div class="fixed-posi" id="sidebar"></div>
+        </div>
+
+        <!-- Main column: filled from data/things.json -->
+        <div class="col-md-9 pt-5 about" id="main">
+          <noscript>This site needs JavaScript enabled to load its content.</noscript>
+        </div>
+
+      </div>
+    </div>
+
+    <script src="js/site.js"></script>
+  </body>
+</html>

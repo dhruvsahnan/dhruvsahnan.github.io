@@ -1,0 +1,121 @@
+{
+  "title": "Things",
+  "intro": "Technology and things I use (or have used) every day.",
+  "categories": [
+    "Computers",
+    "Phone & Audio",
+    "Watches",
+    "Desk",
+    "Gadgets"
+  ],
+  "items": [
+    {
+      "name": "MacBook Pro (M4 Pro)",
+      "category": "Computers",
+      "note": "From MBZUAI",
+      "url": "https://support.apple.com/en-us/121553",
+      "since": "2025",
+      "image": "images/things/macbook-pro.jpg"
+    },
+    {
+      "name": "Lenovo Legion 5",
+      "category": "Computers",
+      "url": "https://lenovo.com/ae/en/c/laptops/legion-laptops/legion-5-series",
+      "since": "2020, died in 2025",
+      "image": "images/things/lenovo-legion-5.webp"
+    },
+    {
+      "name": "iPhone 14 Pro",
+      "category": "Phone & Audio",
+      "url": "https://support.apple.com/kb/SP876",
+      "since": "2023",
+      "image": "images/things/iphone-14-pro-space-black.jpg",
+      "image_source": "https://www.apple.com/newsroom/images/product/iphone/standard/Apple-iPhone-14-Pro-iPhone-14-Pro-Max-space-black-220907_inline.jpg.large.jpg"
+    },
+    {
+      "name": "AirPods Pro 2",
+      "category": "Phone & Audio",
+      "url": "https://support.apple.com/en-us/111834",
+      "since": "2024",
+      "image": "images/things/airpods-pro-2.png",
+      "image_source": "https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/airpods-pro-2.png"
+    },
+    {
+      "name": "Sony WF-C500",
+      "category": "Phone & Audio",
+      "note": "Owned twice: one pair left in a Delhi cab, then lost an earbud from the second on a flight to Abu Dhabi",
+      "url": "https://www.sony.ca/en/electronics/truly-wireless/wf-c500",
+      "since": "2022",
+      "image": "images/things/sony-wf-c500.webp",
+      "image_source": "https://d1ncau8tqf99kp.cloudfront.net/converted/89224_original_local_1200x1050_v3_converted.webp"
+    },
+    {
+      "name": "Sony WH-CH520",
+      "category": "Phone & Audio",
+      "url": "https://www.sony.ca/en/headphones/products/wh-ch520",
+      "since": "2026",
+      "image": "images/things/sony-wh-ch520.png"
+    },
+    {
+      "name": "Kodak Charmera",
+      "category": "Gadgets",
+      "url": "https://www.kodak.com/en/consumer/product/cameras/digital/charmera-keychain-digital-camera/",
+      "since": "2026",
+      "image": "images/things/kodak-charmera.jpg",
+      "image_source": "https://www.kodak.com/content/images/_1200x630_crop_center-center_82_none/kodak-charmera-keychain-digital-camera-yellow-lifestyle.jpg?mtime=1793133838"
+    },
+    {
+      "name": "Samsung Galaxy Watch Active2",
+      "category": "Watches",
+      "note": "Hand-me-down from my dad",
+      "url": "https://www.samsung.com/ae/wearables/galaxy-watch-active2-r830/SM-R830NSDAXSG/",
+      "since": "2023",
+      "image": "images/things/samsung-galaxy-watch-active2.png"
+    },
+    {
+      "name": "Casio AQ-190W",
+      "category": "Watches",
+      "since": "2014",
+      "image": "images/things/casio-aq190w.jpg"
+    },
+    {
+      "name": "Tissot",
+      "category": "Watches",
+      "hidden": true
+    },
+    {
+      "name": "Amazon Kindle Paperwhite",
+      "category": "Gadgets",
+      "note": "Now with a friend",
+      "url": "https://www.amazon.com/All-new-Amazon-Kindle-Paperwhite-glare-free/dp/B0DDZJS3SB",
+      "since": "2024",
+      "image": "images/things/kindle-paperwhite.jpg"
+    },
+    {
+      "name": "Google Nest Mini (2nd gen)",
+      "category": "Phone & Audio",
+      "note": "Second-hand",
+      "url": "https://support.google.com/googlenest/answer/7072284",
+      "since": "2026",
+      "image": "images/things/google-nest-mini.jpg"
+    },
+    {
+      "name": "Apple Magic Mouse 2",
+      "category": "Desk",
+      "note": "Hand-me-down from a friend",
+      "url": "https://support.apple.com/kb/SP730",
+      "since": "2026",
+      "image": "images/things/magic-mouse-2.png",
+      "image_source": "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111885_SP730_magic_mouse_2.png"
+    },
+    {
+      "name": "Apple Magic Keyboard 2",
+      "category": "Desk",
+      "note": "Hand-me-down from a friend",
+      "url": "https://support.apple.com/en-us/112443",
+      "since": "2026",
+      "image": "images/things/magic-keyboard-2.png",
+      "image_source": "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/112443_SP734_magic_keyboard.png"
+    }
+  ]
+}

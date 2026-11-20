@@ -1,7 +1,7 @@
 /* Renders the whole page from the JSON files in data/.
  *
  * You normally never need to edit this file. To add news, papers, talks etc.
- * edit the matching file in data/ (see data/README.md for every field).
+ * edit the matching file in data/.
  */
 (function () {
   'use strict';
@@ -222,8 +222,177 @@
     }).join('') + '</ul>';
   }
 
+  /* ---- "Things" page: photo tiles with category filters ---- */
+
+  var THING_PLACEHOLDER = 'images/things/placeholder.svg';
+
+  function renderThings(data) {
+    var items = visibleItems(data).filter(function (it) { return it.name; });
+
+    // filter chips: "categories" fixes the order; any other category is appended
+    var cats = (data.categories || []).slice();
+    items.forEach(function (it) {
+      if (it.category && cats.indexOf(it.category) === -1) cats.push(it.category);
+    });
+
+    function chip(label, value, active) {
+      return '<button type="button" class="things-chip' + (active ? ' active' : '') +
+        '" data-filter="' + esc(value) + '" aria-pressed="' + (active ? 'true' : 'false') + '">' +
+        esc(label) + '</button>';
+    }
+
+    function tile(it) {
+      var meta = [it.category, it.since ? 'since ' + it.since : ''].filter(Boolean).join(' · ');
+      var inner =
+        '<span class="thing-img' + (it.image_fit === 'cover' ? ' thing-img-cover' : '') + '"><img src="' + esc(safeUrl(it.image || THING_PLACEHOLDER)) + '" alt="' +
+        esc(it.image_alt || it.name) + '" loading="lazy"></span>' +
+        '<span class="thing-name">' + esc(it.name) + '</span>' +
+        (it.note ? '<span class="thing-note">' + esc(it.note) + '</span>' : '') +
+        (meta ? '<span class="thing-meta">' + esc(meta) + '</span>' : '');
+      var card = it.url
+        ? '<a class="thing-card" href="' + esc(safeUrl(it.url)) + '" target="_blank" rel="noopener">' + inner + '</a>'
+        : '<div class="thing-card">' + inner + '</div>';
+      return '<div class="col-6 col-lg-4 thing" data-category="' + esc(it.category || '') + '">' + card + '</div>';
+    }
+
+    var html = heading(data.title || 'Things');
+    if (data.intro) html += '<p class="things-intro">' + inline(data.intro) + '</p>';
+    if (cats.length > 1) {
+      html += '<div class="things-filters" role="group" aria-label="Filter by category">' +
+        chip('All', '', true) + cats.map(function (c) { return chip(c, c, false); }).join('') + '</div>';
+    }
+    html += '<div class="row things-grid">' + items.map(tile).join('') + '</div>';
+    return html;
+  }
+
+  /** Wire up the chips and the missing-image fallback after the page is rendered. */
+  function initThings(root) {
+    var chips = root.querySelectorAll('.things-chip');
+    var tiles = root.querySelectorAll('.thing');
+    Array.prototype.forEach.call(chips, function (btn) {
+      btn.addEventListener('click', function () {
+        var want = btn.getAttribute('data-filter');
+        Array.prototype.forEach.call(chips, function (c) {
+          var on = c === btn;
+          c.classList.toggle('active', on);
+          c.setAttribute('aria-pressed', String(on));
+        });
+        Array.prototype.forEach.call(tiles, function (t) {
+          var show = !want || t.getAttribute('data-category') === want;
+          if (show) t.removeAttribute('hidden'); else t.setAttribute('hidden', '');
+        });
+      });
+    });
+    Array.prototype.forEach.call(root.querySelectorAll('.thing-img img'), function (img) {
+      img.addEventListener('error', function onErr() {
+        img.removeEventListener('error', onErr);
+        img.src = THING_PLACEHOLDER;
+      });
+    });
+  }
+
+  /* ---- "McDonald's" page: world map + list of countries ---- */
+
+  var WORLD_MAP_URL = 'images/world-map.json';
+  var mcCodes = [];   // unique ISO codes of visited countries (set by renderMcdonalds)
+  var mcNames = {};   // code -> display name
+  var regionNames = null;
+
+  /** "IN" -> flag emoji. Returns '' for anything that is not two capital letters. */
+  function flagEmoji(code) {
+    if (!/^[A-Z]{2}$/.test(code)) return '';
+    return String.fromCodePoint(0x1F1E6 + code.charCodeAt(0) - 65, 0x1F1E6 + code.charCodeAt(1) - 65);
+  }
+
+  /** "IN" -> "India" using the browser's built-in region names. */
+  function countryName(code) {
+    try {
+      regionNames = regionNames || new Intl.DisplayNames(['en'], { type: 'region' });
+      return regionNames.of(code) || code;
+    } catch (e) {
+      return code;
+    }
+  }
+
+  function renderMcdonalds(data) {
+    var items = newestFirst(visibleItems(data)).filter(function (it) {
+      return /^[A-Za-z]{2}$/.test(String(it.country || '').trim());
+    });
+    items.forEach(function (it) { it.country = String(it.country).trim().toUpperCase(); });
+
+    mcCodes = [];
+    mcNames = {};
+    items.forEach(function (it) {
+      if (mcCodes.indexOf(it.country) === -1) mcCodes.push(it.country);
+      if (!mcNames[it.country]) mcNames[it.country] = it.name || countryName(it.country);
+    });
+    var n = mcCodes.length;
+
+    function card(it) {
+      var when = it.date ? fmtDate(it.date) : '';
+      return '<div class="col-6 col-lg-4 mc-tile"><div class="mc-tile-in">' +
+        (it.badge ? '<span class="mc-badge" aria-hidden="true">' + esc(it.badge) + '</span>' : '') +
+        '<span class="mc-flag" aria-hidden="true">' + esc(flagEmoji(it.country)) + '</span>' +
+        '<span class="mc-name">' + esc(it.name || countryName(it.country)) +
+          (it.when ? '<span class="mc-when"> | ' + inline(it.when) + '</span>' : '') + '</span>' +
+        (it.order ? '<span class="mc-order"><i class="fas fa-hamburger" aria-hidden="true"></i> ' + esc(it.order) + '</span>' : '') +
+        (it.note ? '<span class="mc-note">' + esc(it.note) + '</span>' : '') +
+        (when ? '<span class="mc-date">' + esc(when) + '</span>' : '') +
+        '</div></div>';
+    }
+
+    var html = heading(data.title || "McDonald's Around the World");
+    if (data.intro) html += '<p class="things-intro">' + inline(data.intro) + '</p>';
+    html += '<p class="mc-count"><span class="mc-count-num">' + n + '</span> ' +
+      (n === 1 ? 'country' : 'countries') + ' visited</p>';
+    html += '<div class="mc-map" id="mc-map" role="img" aria-label="World map with ' + n +
+      (n === 1 ? ' country' : ' countries') + ' highlighted"></div>';
+    html += n ? '<div class="row mc-list">' + items.map(card).join('') + '</div>'
+              : '<p class="things-intro">No countries added yet.</p>';
+    return html;
+  }
+
+  /** Fetch the pre-projected world outlines and draw the map into #mc-map. */
+  function initMcdonalds(root) {
+    var box = root.querySelector('#mc-map');
+    if (!box) return;
+    fetch(WORLD_MAP_URL)
+      .then(function (res) {
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        return res.json();
+      })
+      .then(function (map) {
+        var visited = {};
+        mcCodes.forEach(function (c) { visited[c] = true; });
+        var base = [];
+        var hit = [];
+        Object.keys(map.paths).forEach(function (code) {
+          if (visited[code]) {
+            hit.push('<path class="mc-country mc-visited" d="' + esc(map.paths[code]) + '"><title>' +
+              esc(mcNames[code] || code) + '</title></path>');
+          } else {
+            base.push('<path class="mc-country" d="' + esc(map.paths[code]) + '"></path>');
+          }
+        });
+
+        // Far-flung pieces (French Guiana etc.) are drawn as plain land and never shaded
+        Object.keys(map.overseas || {}).forEach(function (code) {
+          base.push('<path class="mc-country" d="' + esc(map.overseas[code]) + '"></path>');
+        });
+
+        box.innerHTML = '<svg viewBox="' + esc(map.viewBox) + '" focusable="false" aria-hidden="true">' +
+          base.join('') + hit.join('') + '</svg>';
+      })
+      .catch(function (e) {
+        box.innerHTML = '<div class="data-error"><b>Could not load <code>' + esc(WORLD_MAP_URL) +
+          '</code></b><br>' + esc(e.message) + '</div>';
+      });
+  }
+
   var SECTIONS = {
     about: { render: renderAbout },
+    things: { render: renderThings },
+    mcdonalds: { render: renderMcdonalds },
     news: { render: renderNews, noRuleBefore: true },
     publications: { render: renderPublications },
     tutorials: { render: renderTutorials },
@@ -237,7 +406,7 @@
     }
   };
 
-  function renderSidebar(profile) {
+  function renderSidebar(profile, page) {
     var name = profile.name || {};
     var html = '<p class="name"><span style="font-weight: 600;">' + esc(name.first || '') + ' ' + esc(name.last || '') + ' </span></p>';
     if (profile.photo) {
@@ -248,9 +417,14 @@
     html += '<div class="pt-5 menur"></div>';
     if (profile.email) html += esc(profile.email);
     html += '<hr>';
-    (profile.links || []).forEach(function (l) {
+    var links = (profile.links || []).slice();
+    if (page && page !== 'home') {
+      links.unshift({ label: 'Home', url: 'index.html', icon: 'fas fa-home', same_tab: true });
+    }
+    links.forEach(function (l) {
       var icon = /^[\w\- ]+$/.test(l.icon || '') ? l.icon : 'fas fa-link';
-      html += '<div><a class="menulink" target="_blank" rel="noopener" href="' + esc(safeUrl(l.url)) + '">' +
+      var target = l.same_tab ? '' : ' target="_blank" rel="noopener"';
+      html += '<div><a class="menulink"' + target + ' href="' + esc(safeUrl(l.url)) + '">' +
         '<i class="' + icon + '"></i>&nbsp; ' + esc(l.label) + '</a></div>';
     });
     return html;
@@ -266,7 +440,7 @@
   }
 
   function loadJson(name) {
-    return fetch(DATA_DIR + name + '.json', { cache: 'no-cache' })
+    return fetch(DATA_DIR + name + '.json')
       .then(function (res) {
         if (!res.ok) throw new Error('HTTP ' + res.status + ' (file missing?)');
         return res.text();
@@ -297,9 +471,33 @@
     }
   }
 
+  // Loads Google Tag Manager (GTM-...) or Google Analytics 4 (G-...) from site.json "analytics_id".
+  // Skipped when the field is empty and when running on localhost, so local testing is not counted.
+  function loadAnalytics(id) {
+    if (!id || /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname)) return;
+    id = String(id).trim();
+    var s = document.createElement('script');
+    s.async = true;
+    window.dataLayer = window.dataLayer || [];
+    if (/^GTM-[A-Z0-9]+$/.test(id)) {
+      window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+      s.src = 'https://www.googletagmanager.com/gtm.js?id=' + id;
+    } else if (/^G-[A-Z0-9]+$/.test(id)) {
+      window.gtag = function () { window.dataLayer.push(arguments); };
+      window.gtag('js', new Date());
+      window.gtag('config', id);
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + id;
+    } else {
+      return;
+    }
+    document.head.appendChild(s);
+  }
+
   function init() {
     var sidebarEl = document.getElementById('sidebar');
     var mainEl = document.getElementById('main');
+    // index.html is the home page; other pages set <body data-page="name">
+    var page = document.body.getAttribute('data-page') || 'home';
 
     if (location.protocol === 'file:') {
       mainEl.innerHTML = '<div class="data-error"><b>Open this site through a local web server.</b><br>' +
@@ -308,15 +506,22 @@
       return;
     }
 
+    // Fetch profile.json in parallel with site.json so the sidebar can appear immediately.
+    var profileP = tryLoad('profile');
+    profileP.then(function (r) {
+      if (r.ok) sidebarEl.innerHTML = renderSidebar(r.data, page);
+    });
+
     tryLoad('site').then(function (siteRes) {
       if (!siteRes.ok) {
         mainEl.innerHTML = errorBox('site', siteRes.error);
         return;
       }
       var site = siteRes.data;
-      var order = (site.sections || []).filter(function (s) { return SECTIONS[s]; });
+      loadAnalytics(site.analytics_id);
+      var order = (page === 'home' ? (site.sections || []) : [page]).filter(function (s) { return SECTIONS[s]; });
 
-      return Promise.all([tryLoad('profile')].concat(order.map(tryLoad))).then(function (results) {
+      return Promise.all([profileP].concat(order.map(tryLoad))).then(function (results) {
         var profileRes = results[0];
         var profile = profileRes.ok ? profileRes.data : {};
         var fullName = ((profile.name && profile.name.first) || '') + ' ' +
@@ -326,7 +531,7 @@
           .map(normName);
         var ctx = { selfNames: selfNames };
 
-        sidebarEl.innerHTML = profileRes.ok ? renderSidebar(profile) : errorBox('profile', profileRes.error);
+        if (!profileRes.ok) sidebarEl.innerHTML = errorBox('profile', profileRes.error);
         setMeta(site, fullName.trim());
 
         var html = '';
@@ -342,6 +547,9 @@
               body = errorBox(key, 'Unexpected data shape: ' + e.message);
             }
           }
+          if (page !== 'home' && res.ok && res.data && res.data.title) {
+            document.title = res.data.title + ' | ' + (site.title || fullName.trim());
+          }
           if (i > 0 && !SECTIONS[key].noRuleBefore) html += '<hr>';
           html += '<section id="' + esc(key) + '">' + body + '</section>';
         });
@@ -351,6 +559,8 @@
             inline(site.footer) + '</span>';
         }
         mainEl.innerHTML = html;
+        if (mainEl.querySelector('.things-grid')) initThings(mainEl);
+        if (mainEl.querySelector('.mc-map')) initMcdonalds(mainEl);
 
         // "Show more" toggle for news
         Array.prototype.forEach.call(mainEl.querySelectorAll('[data-toggle-target]'), function (btn) {
