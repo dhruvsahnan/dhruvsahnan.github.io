@@ -10,6 +10,13 @@
   ],
   "items": [
     {
+      "name": "Custom PC",
+      "category": "Computers",
+      "note": "Ryzen 7 9700X, RTX 5060Ti, Crucial 16GBx2 DDR5, WD Blue 1 TB.",
+      "image": "images/things/custom-pc.jpeg",
+      "since": "2026"
+    },
+    {
       "name": "MacBook Pro (M4 Pro)",
       "category": "Computers",
       "note": "From MBZUAI",
@@ -41,6 +48,13 @@
       "image_source": "https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/airpods-pro-2.png"
     },
     {
+      "name": "Sony WH-CH520",
+      "category": "Phone & Audio",
+      "url": "https://www.sony.ca/en/headphones/products/wh-ch520",
+      "since": "2026",
+      "image": "images/things/sony-wh-ch520.png"
+    },
+    {
       "name": "Sony WF-C500",
       "category": "Phone & Audio",
       "note": "Owned twice: one pair left in a Delhi cab, then lost an earbud from the second on a flight to Abu Dhabi",
@@ -48,13 +62,6 @@
       "since": "2022",
       "image": "images/things/sony-wf-c500.webp",
       "image_source": "https://d1ncau8tqf99kp.cloudfront.net/converted/89224_original_local_1200x1050_v3_converted.webp"
-    },
-    {
-      "name": "Sony WH-CH520",
-      "category": "Phone & Audio",
-      "url": "https://www.sony.ca/en/headphones/products/wh-ch520",
-      "since": "2026",
-      "image": "images/things/sony-wh-ch520.png"
     },
     {
       "name": "Kodak Charmera",
@@ -65,12 +72,10 @@
       "image_source": "https://www.kodak.com/content/images/_1200x630_crop_center-center_82_none/kodak-charmera-keychain-digital-camera-yellow-lifestyle.jpg?mtime=1793133838"
     },
     {
-      "name": "Samsung Galaxy Watch Active2",
+      "name": "Tissot Classic Dream",
       "category": "Watches",
-      "note": "Hand-me-down from my dad",
-      "url": "https://www.samsung.com/ae/wearables/galaxy-watch-active2-r830/SM-R830NSDAXSG/",
-      "since": "2023",
-      "image": "images/things/samsung-galaxy-watch-active2.png"
+      "since": "2025",
+      "image": "images/things/tissot-T129410A.webp"
     },
     {
       "name": "Casio AQ-190W",
@@ -79,17 +84,12 @@
       "image": "images/things/casio-aq190w.jpg"
     },
     {
-      "name": "Tissot",
+      "name": "Samsung Galaxy Watch Active2",
       "category": "Watches",
-      "hidden": true
-    },
-    {
-      "name": "Amazon Kindle Paperwhite",
-      "category": "Gadgets",
-      "note": "Now with a friend",
-      "url": "https://www.amazon.com/All-new-Amazon-Kindle-Paperwhite-glare-free/dp/B0DDZJS3SB",
-      "since": "2024",
-      "image": "images/things/kindle-paperwhite.jpg"
+      "note": "Hand-me-down from my dad",
+      "url": "https://www.samsung.com/ae/wearables/galaxy-watch-active2-r830/SM-R830NSDAXSG/",
+      "since": "2023",
+      "image": "images/things/samsung-galaxy-watch-active2.png"
     },
     {
       "name": "Google Nest Mini (2nd gen)",
@@ -116,6 +116,14 @@
       "since": "2026",
       "image": "images/things/magic-keyboard-2.png",
       "image_source": "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/112443_SP734_magic_keyboard.png"
+    },
+    {
+      "name": "Amazon Kindle Paperwhite",
+      "category": "Gadgets",
+      "note": "Now with a friend",
+      "url": "https://www.amazon.com/All-new-Amazon-Kindle-Paperwhite-glare-free/dp/B0DDZJS3SB",
+      "since": "2024",
+      "image": "images/things/kindle-paperwhite.jpg"
     }
   ]
 }
