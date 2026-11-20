@@ -226,6 +226,12 @@
 
   var THING_PLACEHOLDER = 'images/things/placeholder.svg';
 
+  /** Tile specific padding for the things page */
+  function thingPad(v) {
+    if (typeof v === 'number') return v + '%';
+    return /^\d+(\.\d+)?(%|px)$/.test(v || '') ? v : null;
+  }
+
   function renderThings(data) {
     var items = visibleItems(data).filter(function (it) { return it.name; });
 
@@ -243,8 +249,10 @@
 
     function tile(it) {
       var meta = [it.category, it.since ? 'since ' + it.since : ''].filter(Boolean).join(' · ');
+      var pad = thingPad(it.padding);
+      var padStyle = pad ? ' style="--thing-pad:' + esc(pad) + '"' : '';
       var inner =
-        '<span class="thing-img' + (it.image_fit === 'cover' ? ' thing-img-cover' : '') + '"><img src="' + esc(safeUrl(it.image || THING_PLACEHOLDER)) + '" alt="' +
+        '<span class="thing-img' + (it.image_fit === 'cover' ? ' thing-img-cover' : '') + '"' + padStyle + '><img src="' + esc(safeUrl(it.image || THING_PLACEHOLDER)) + '" alt="' +
         esc(it.image_alt || it.name) + '" loading="lazy"></span>' +
         '<span class="thing-name">' + esc(it.name) + '</span>' +
         (it.note ? '<span class="thing-note">' + esc(it.note) + '</span>' : '') +
@@ -252,7 +260,7 @@
       var card = it.url
         ? '<a class="thing-card" href="' + esc(safeUrl(it.url)) + '" target="_blank" rel="noopener">' + inner + '</a>'
         : '<div class="thing-card">' + inner + '</div>';
-      return '<div class="col-6 col-lg-4 thing" data-category="' + esc(it.category || '') + '">' + card + '</div>';
+      return '<div class="col-6 col-md-4 col-lg-3 thing" data-category="' + esc(it.category || '') + '">' + card + '</div>';
     }
 
     var html = heading(data.title || 'Things');

@@ -14,7 +14,8 @@
       "category": "Computers",
       "note": "Ryzen 7 9700X, RTX 5060Ti, Crucial 16GBx2 DDR5, WD Blue 1 TB.",
       "image": "images/things/custom-pc.jpeg",
-      "since": "2026"
+      "since": "2026",
+      "padding": "0%"
     },
     {
       "name": "MacBook Pro (M4 Pro)",
@@ -22,14 +23,16 @@
       "note": "From MBZUAI",
       "url": "https://support.apple.com/en-us/121553",
       "since": "2025",
-      "image": "images/things/macbook-pro.jpg"
+      "image": "images/things/macbook-pro.jpg",
+      "padding": "0%"
     },
     {
       "name": "Lenovo Legion 5",
       "category": "Computers",
       "url": "https://lenovo.com/ae/en/c/laptops/legion-laptops/legion-5-series",
       "since": "2020, died in 2025",
-      "image": "images/things/lenovo-legion-5.webp"
+      "image": "images/things/lenovo-legion-5.webp",
+      "padding": "5%"
     },
     {
       "name": "iPhone 14 Pro",
@@ -37,7 +40,8 @@
       "url": "https://support.apple.com/kb/SP876",
       "since": "2023",
       "image": "images/things/iphone-14-pro-space-black.jpg",
-      "image_source": "https://www.apple.com/newsroom/images/product/iphone/standard/Apple-iPhone-14-Pro-iPhone-14-Pro-Max-space-black-220907_inline.jpg.large.jpg"
+      "image_source": "https://www.apple.com/newsroom/images/product/iphone/standard/Apple-iPhone-14-Pro-iPhone-14-Pro-Max-space-black-220907_inline.jpg.large.jpg",
+      "padding": "4%"
     },
     {
       "name": "AirPods Pro 2",
@@ -75,7 +79,8 @@
       "name": "Tissot Classic Dream",
       "category": "Watches",
       "since": "2025",
-      "image": "images/things/tissot-T129410A.webp"
+      "image": "images/things/tissot-T129410A.webp",
+      "padding": "4%"
     },
     {
       "name": "Casio AQ-190W",
@@ -115,7 +120,8 @@
       "url": "https://support.apple.com/en-us/112443",
       "since": "2026",
       "image": "images/things/magic-keyboard-2.png",
-      "image_source": "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/112443_SP734_magic_keyboard.png"
+      "image_source": "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/112443_SP734_magic_keyboard.png",
+      "padding": "4%"
     },
     {
       "name": "Amazon Kindle Paperwhite",
