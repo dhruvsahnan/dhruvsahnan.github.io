@@ -8,7 +8,9 @@
     },
     {
       "date": "2026-09",
-      "text": "Our paper [*Promises and Pitfalls of Community Moderation on Social Media*](https://arxiv.org/abs/2505.20067) was accepted at **PNAS**."
+      "emoji": 🧑🏻‍💻,
+      "highlight": true,
+      "text": "Our paper [*Promises and Pitfalls of Community Moderation on Social Media*](https://www.pnas.org/doi/10.1073/pnas.2518033123) was accepted at **PNAS**."
     },
     {
       "date": "2026-08",
