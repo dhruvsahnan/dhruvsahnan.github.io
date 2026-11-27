@@ -242,6 +242,25 @@
     },
     {
       "date": "2021",
+      "title": "Better Prevent than React: Deep Stratified Learning to Predict Hate Intensity of Twitter Reply Chains",
+      "authors": [
+        "Dhruv Sahnan",
+        "Snehil Dahiya",
+        "Vasu Goel",
+        "Anil Bandhakavi",
+        "Tanmoy Chakraborty"
+      ],
+      "venue_short": "ICDM '21",
+      "venue": "IEEE International Conference on Data Mining 2021",
+      "links": [
+        {
+          "label": "IEEE Xplore",
+          "url": "https://ieeexplore.ieee.org/document/9679052"
+        }
+      ]
+    },
+    {
+      "date": "2021",
       "title": "Would Your Tweet Invoke Hate on the Fly? Forecasting Hate Intensity of Reply Threads on Twitter",
       "authors": [
         "Snehil Dahiya",
@@ -260,25 +279,6 @@
         {
           "label": "ACM Digital Library",
           "url": "https://doi.org/10.1145/3447548.3467150"
-        }
-      ]
-    },
-    {
-      "date": "2021",
-      "title": "Better Prevent than React: Deep Stratified Learning to Predict Hate Intensity of Twitter Reply Chains",
-      "authors": [
-        "Dhruv Sahnan",
-        "Snehil Dahiya",
-        "Vasu Goel",
-        "Anil Bandhakavi",
-        "Tanmoy Chakraborty"
-      ],
-      "venue_short": "ICDM '21",
-      "venue": "IEEE International Conference on Data Mining 2021",
-      "links": [
-        {
-          "label": "IEEE Xplore",
-          "url": "https://ieeexplore.ieee.org/document/9679052"
         }
       ]
     }
